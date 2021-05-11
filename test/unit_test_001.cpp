@@ -25,7 +25,7 @@
 
 
 #include "Arduino.h"
-#include "shiftInSlow.h"
+#include "ShiftInSlow.h"
 
 
 // PATCH FOR DUE & ZERO FOR UNIT TEST - https://github.com/Arduino-CI/arduino_ci/issues/252
