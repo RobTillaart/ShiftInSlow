@@ -1,7 +1,7 @@
 //
 //    FILE: shiftInSlow_demo.ino
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.2
+// VERSION: 0.1.0
 // PURPOSE: test sketch
 //     URL: https://github.com/RobTillaart/ShiftInSlow
 //
@@ -38,3 +38,5 @@ void setup()
 void loop()
 {
 }
+
+// -- END OF FILE --

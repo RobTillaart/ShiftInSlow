@@ -50,10 +50,10 @@ unittest(test_constructor)
 
   fprintf(stderr, "VERSION:\t%s\n", SHIFTINSLOW_LIB_VERSION);
   assertEqual(0, SIS.lastRead());
-  assertEqual(LSBFIRST, FSI.getBitOrder());
+  assertEqual(LSBFIRST, SIS.getBitOrder());
   
-  FSI.setBitOrder(MSBFIRST);
-  assertEqual(MSBFIRST, FSI.getBitOrder());
+  SIS.setBitOrder(MSBFIRST);
+  assertEqual(MSBFIRST, SIS.getBitOrder());
 }
 
 

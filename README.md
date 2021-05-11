@@ -11,7 +11,8 @@ A library for shiftOutSlow also exist.
 
 ## Description
 
-shiftInSlow is a class that has a build in delay (in microseconds) that allows tuning the time per bit. This allows one to improve reliability when using longer lines.
+shiftInSlow is an experimental library that has a build in delay (in microseconds) that allows tuning the time per bit. 
+This allows one to improve reliability e.g. when using longer lines.
 
 The datapin and clockpin are set in the constructor, the delay is settable per byte send to be able to optimize runtime.
 
@@ -30,8 +31,8 @@ The interface exists of the following functions:
 - **ShiftInSlow(datapin, clockpin, bitorder = LSBFIRST)** constructor.
 - **int read(void)** reads a new value
 - **int lastRead()** returns last value read
-- **int setDelay(uint16_t microseconds)** set delay per bit from 0 .. 65535 microseconds.
-- **int getDelay()** returns the set delay in microseconds.
+- **void setDelay(uint16_t microseconds)** set delay per bit from 0 .. 65535 microseconds.
+- **uint16_t getDelay()** returns the set delay in microseconds.
 - **bool setBitOrder(bitOrder)** set LSBFIRST or MSBFIRST. Returns false for other values.
 - **uint8_t getBitOrder(void)** returns LSBFIRST or MSBFIRST
 

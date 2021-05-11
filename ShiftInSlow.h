@@ -36,7 +36,7 @@ private:
   uint8_t  _dataPin  = 0;
   uint8_t  _bitOrder = LSBFIRST;
   uint16_t _delay    = 0;
-  int      _value    = 0;
+  uint8_t  _value    = 0;
 };
 
 // -- END OF FILE --
