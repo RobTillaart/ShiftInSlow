@@ -101,21 +101,7 @@ unittest(test_read)
   ShiftInSlow SIS(12, 13);
 
   fprintf(stderr, "VERSION:\t%s\n", SHIFTINSLOW_LIB_VERSION);
-
-// apparently needed... To be investigated someday ...
-#if defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_SAMD)
-
   assertEqual(0, SIS.read());
-  assertEqual(0, SIS.readLSBFIRST());
-  assertEqual(0, SIS.readMSBFIRST());
-
-#else  // AVR
-
-  assertEqual(255, SIS.read());
-  assertEqual(255, SIS.readLSBFIRST());
-  assertEqual(255, SIS.readMSBFIRST());
-  
-#endif
 }
 
 
