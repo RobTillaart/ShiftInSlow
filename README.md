@@ -1,13 +1,14 @@
 
 [![Arduino CI](https://github.com/RobTillaart/ShiftInSlow/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
-
+[![Arduino-lint](https://github.com/RobTillaart/ShiftInSlow/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/ShiftInSlow/actions/workflows/arduino-lint.yml)
+[![JSON check](https://github.com/RobTillaart/ShiftInSlow/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/ShiftInSlow/actions/workflows/jsoncheck.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/ShiftInSlow/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/RobTillaart/ShiftInSlow.svg?maxAge=3600)](https://github.com/RobTillaart/ShiftInSlow/releases)
 
 
 # ShiftInSlow
 
-Arduino library for shiftIn with build-in delay - e.g. for 74HC165
+Arduino library for shiftIn with build-in delay - e.g. for 74HC165.
 
 A library for shiftOutSlow also exist.
 
@@ -17,7 +18,7 @@ A library for shiftOutSlow also exist.
 shiftInSlow is an experimental library that has a build in delay (in microseconds) that allows tuning the time per bit. 
 This allows one to improve reliability e.g. when using longer lines.
 
-The dataPin and clockPin are set in the constructor, the delay is settable per byte send to be able to optimize runtime.
+The dataPin and clockPin are set in the constructor, the delay is configurable per byte send to be able to optimize runtime.
 
 
 ## Performance
@@ -26,6 +27,7 @@ The performance of **read()** with a delay of 0 microseconds is slower than the 
 **shiftIn()** due to some overhead. 
 
 The delay requested is split in two (expect rounding errors) to have "nice" looking pulses.
+This keeps the duty cycle ~50%.
 
 
 ## Interface
@@ -49,9 +51,10 @@ See examples
 
 - improve documentation
 - add examples
-- increase max delay ? 
+- increase max delay uint32_t ? 
 - set delay in terms of frequency - delay is 'wave length'
 - set delay in terms of max total time the read may cost.
 - set default delay = 0, is no delay ?
 - adaptive speed example?
-- 
+- get set dutyCycle(0 .. 99%)
+-
