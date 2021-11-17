@@ -49,6 +49,7 @@ See examples
 
 ## Future
 
+- Add a select pin to be more SPI alike?
 - improve documentation
 - add examples
 - increase max delay uint32_t ? 
