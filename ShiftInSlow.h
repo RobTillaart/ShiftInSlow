@@ -12,13 +12,13 @@
 #include "Arduino.h"
 
 
-#define SHIFTINSLOW_LIB_VERSION (F("0.1.0"))
+#define SHIFTINSLOW_LIB_VERSION           (F("0.1.0"))
 
 
 class ShiftInSlow
 {
 public:
-  // bitorder = { LSBFIRST, MSBFIRST };
+  // bitOrder = { LSBFIRST, MSBFIRST };
   ShiftInSlow(const uint8_t dataPin, const uint8_t clockPin, const uint8_t  bitOrder = LSBFIRST);
 
   int      read(void);
@@ -27,7 +27,7 @@ public:
   bool     setBitOrder(const uint8_t bitOrder);
   uint8_t  getBitOrder(void) { return _bitOrder; };
   
-  void     setDelay(uint16_t d) { _delay = d; };
+  void     setDelay(uint16_t microseconds) { _delay = microseconds; };
   uint16_t getDelay() { return _delay; };
 
 
@@ -39,4 +39,6 @@ private:
   uint8_t  _value    = 0;
 };
 
+
 // -- END OF FILE --
+
