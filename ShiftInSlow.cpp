@@ -52,4 +52,6 @@ bool ShiftInSlow::setBitOrder(const uint8_t bitOrder)
   return false;
 }
 
+
 // -- END OF FILE --
+
